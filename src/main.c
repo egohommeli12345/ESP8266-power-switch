@@ -272,7 +272,8 @@ void user_init(void) {
 
     wifi_station_set_config_current(&stationConfig);
     bool connected = wifi_station_connect();
-    os_printf("Connected: %d", connected);
+    //os_printf("Connected: %d\n", connected); // Doesnt wait for connection
+    // TODO: Event handler for wifi events
 
     CreateTcpSocket();
 }
