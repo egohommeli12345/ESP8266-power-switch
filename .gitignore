@@ -1,0 +1,4 @@
+.pio
+.idea
+src/wifi_credentials.h
+.clangd
