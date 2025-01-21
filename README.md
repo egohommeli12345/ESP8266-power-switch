@@ -10,3 +10,10 @@ You can also send raw TCP packet with either 0 (off) or 1 (on) to control the re
 Make sure you have Espressif 8266 platform installed on platformio.
 Connect the board via usb and run:
 `pio run -t uploadfs`
+
+### NOTE
+I've been lazy to yet change the GUIs fetch URI to be dynamic so:
+  - You have to first build and see what IP does the board get
+  - (You can use `pio run -t upload -t monitor`, it will print the ip on serial monitor) 
+  - Then build again with correct IP in the main.c HTML -part
+  - (If you do not do this, the HTTP request are sent to wrong IP, you can still of course use curl or your own built GUI for sending the requests)
